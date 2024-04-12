@@ -30,11 +30,47 @@ function App() {
               <p className='font-bold text-slate-700'>Michelle Appleton</p>
               <p className='text-slate-400'>28 Jun 2020</p>
             </div>
-            <img
-              src={iconSh}
-              alt=''
-              className='w-10 ml-auto bg-slate-200 rounded-full p-2'
-            />
+
+            <div className='h-10 w-10 flex items-center justify-center bg-slate-200 rounded-full ml-auto cursor-pointer'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='15'
+                height='13'
+                className='text-slate-600 fill-current'
+              >
+                <path
+                  fill=''
+                  d='M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z'
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div className='bg-slate-600 flex items-center px-10 py-5'>
+          <p className='text-lg tracking-[0.3em] text-slate-100'>SHARE</p>
+          <div className='flex gap-5 ml-5 items-center'>
+            <a href='www.google.com' target='_blank' className='cursor-pointer'>
+              <img src={iconFb} alt='' />
+            </a>
+            <a href='www.google.com' target='_blank' className='cursor-pointer'>
+              <img src={iconTw} alt='' className='cursor-pointer' />
+            </a>
+            <a href='www.google.com' target='_blank' className='cursor-pointer'>
+              <img src={iconPt} alt='' className='cursor-pointer' />
+            </a>
+          </div>
+          <div className='h-10 w-10 flex items-center justify-center bg-slate-500 rounded-full ml-auto cursor-pointer'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='15'
+              height='13'
+              className='text-slate-200 fill-current'
+            >
+              <path
+                fill=''
+                d='M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z'
+              />
+            </svg>
           </div>
         </div>
       </div>
