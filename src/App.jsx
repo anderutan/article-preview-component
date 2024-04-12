@@ -1,8 +1,7 @@
 import drawer from './assets/drawers.jpg';
-import useWindowDimensions from './UseWindowDimensions';
-import PopoverMenu from './PopoverMenu';
-import PopoverMenuMd from './PopoverMenuMd';
-import { useState, useEffect } from 'react';
+import useWindowDimensions from './utility/UseWindowDimensions';
+import PopoverMenu from './components/PopoverMenu';
+import PopoverMenuMd from './components/PopoverMenuMd';
 
 function App() {
   return (
