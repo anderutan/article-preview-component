@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Very Dark Grayish Blue = slate-600 */
-/* Desaturated Dark Blue = slate-500 */
-/* Grayish Blue = slate-400 */
-/* Light Grayish Blue = slate-100 */
-
 /* Box sizing rules */
 *,
 *::before,

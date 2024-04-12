@@ -1,43 +1,17 @@
 import drawer from './assets/drawers.jpg';
-
+import useWindowDimensions from './UseWindowDimensions';
 import PopoverMenu from './PopoverMenu';
+import PopoverMenuMd from './PopoverMenuMd';
 import { useState, useEffect } from 'react';
 
 function App() {
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-
-  function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = useState(
-      getWindowDimensions()
-    );
-
-    useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return windowDimensions;
-  }
-
-  console.log();
-
   return (
     <div className='w-full h-screen bg-slate-200 grid place-items-center'>
-      <div className='mx-6 rounded-xl overflow-hidden bg-white md:flex'>
+      <div className='mx-6 rounded-xl overflow-hidden bg-white md:flex md:h-[300px] md:max-w-[800px]'>
         <img
           src={drawer}
           alt=''
-          className='h-60 w-full object-cover object-top '
+          className='h-60 md:h-full w-full object-cover  '
         />
         <div className='h-full w-full  pt-12 px-10 pb-5 md:flex md:flex-col'>
           <p className='text-xl font-bold tracking-wide mb-5 text-slate-700'>
@@ -49,7 +23,7 @@ function App() {
             felt slightly bare and uninviting. I've got some simple tips to help
             you make any room feel complete.
           </p>
-          {useWindowDimensions().width > 767 && <PopoverMenu />}
+          {useWindowDimensions().width > 767 && <PopoverMenuMd />}
         </div>
         {/* profile */}
         {useWindowDimensions().width < 768 && <PopoverMenu />}
